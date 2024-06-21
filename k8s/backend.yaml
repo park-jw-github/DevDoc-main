@@ -37,17 +37,17 @@ spec:
 #                  name: oauth-secret
 #                  key: KAKAO_OAUTH_CLIENT_SECRET
 
-            - name: HTTP_PROXY
-              value: http://krmp-proxy.9rum.cc:3128
-            - name: HTTPS_PROXY
-              value: http://krmp-proxy.9rum.cc:3128
+#            - name: HTTP_PROXY
+#              value: http://krmp-proxy.9rum.cc:3128
+#            - name: HTTPS_PROXY
+#              value: http://krmp-proxy.9rum.cc:3128
 
 
-          ports:
-            - containerPort: 8080
-          resources:
-            requests:
-              memory: 1Gi
+#          ports:
+#            - containerPort: 8080
+#          resources:
+#            requests:
+#              memory: 1Gi
 
 ---
 apiVersion: v1
