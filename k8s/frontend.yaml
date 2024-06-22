@@ -14,15 +14,13 @@ spec:
     spec:
       containers:
         - name: frontend
-          # #여러분의 frontend image 주소를 입력해주세요.
+          # 여러분의 frontend image 주소를 입력해주세요.
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_f5e1d4caaa82
-#          env:
-#            # KAKAO_API_KEY 추가
-#            - name: KAKAO_API_KEY
-#              valueFrom:
-#                secretKeyRef:
-#                  name: kakao-api-secret
-#                  key: KAKAO_API_KEY
+          env:
+            - name: REACT_APP_API_URL
+              value: http://backend:8080
+          ports:
+            - containerPort: 3000
 
 ---
 apiVersion: v1
@@ -35,3 +33,4 @@ spec:
   ports:
     - port: 3000
       targetPort: 3000
+
