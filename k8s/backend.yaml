@@ -25,11 +25,6 @@ spec:
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
               value: root
-            - name: JWT_SECRETKEY
-              valueFrom:
-                secretKeyRef:
-                  name: jwt-secret
-                  key: JWT_SECRETKEY
             - name: HTTP_PROXY
               value: http://krmp-proxy.9rum.cc:3128
             - name: HTTPS_PROXY
